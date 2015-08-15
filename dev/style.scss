@@ -1,0 +1,363 @@
+/* style.scss */
+
+@font-face {
+    font-family: 'diamondsbold';
+    src: url('../fonts/hvd_fonts_-_diamondsbold-webfont.eot');
+    src: url('../fonts/hvd_fonts_-_diamondsbold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/hvd_fonts_-_diamondsbold-webfont.woff') format('woff'),
+         url('../fonts/hvd_fonts_-_diamondsbold-webfont.ttf') format('truetype'),
+         url('../fonts/hvd_fonts_-_diamondsbold-webfont.svg#diamondsbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Variables */
+
+$white: #ffece7;
+$dark: #524d46;
+$darkblue: #3060BF;
+$blue: #0056ff;
+$purple: #3d012f;
+
+$red: #ff003f;
+$lightblue: #69c7e8;
+$yellow: #e5d236;
+$green: #72c4c3;
+
+$space: 2.5%;
+
+$radius: 3px;
+
+$header-height: 60px;
+
+iframe#twitter-widget-1.twitter-timeline.twitter-timeline-rendered .header {display: none !important;}
+
+html, body {height: 100%;}
+
+* {text-decoration: none; color: inherit;}
+
+body {
+	color: $red;
+	background: $purple;
+	font-size: 110%;
+	line-height: 1.5;
+	font-family: Montserrat, Arial; font-weight: 700; font-style: normal;
+}
+
+h1 {
+	font-family: diamondsbold, arial, sans-serif;
+	font-size: 1.5em;
+}
+
+.btn, .more {
+	background: $red;
+	text-transform: uppercase;
+	padding: $space/2 $space;
+	font-size: .8em;
+	color: $white; 
+}
+
+.more {
+	font-size: .6em;
+	margin: 0 0 $space*2;
+	display: inline-block;
+}
+
+#container {
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+	background: $white;
+	overflow: hidden;
+	min-height: 100%;
+	div#hero {
+		min-height: 500px;
+		max-height: 600px;
+		height: 65vh;
+		width: 100%;
+		max-width: 1440px;
+		background: $purple url(../img/header3.jpg) center no-repeat;
+		background-size: cover;
+		position: relative;
+		#nav {
+			overflow: hidden;
+			#logo {
+				background: url(../img/icon-white.svg) center no-repeat;
+				display: inline-block;
+				width: 60px;
+				height: $header-height;
+				float: left;
+			}
+
+			ul {
+				width: 49%;
+				padding: .5%;
+				height: $header-height;
+				line-height: $header-height;
+				float: left;
+				font-size: 120%;
+				color: $white;
+				li {
+					display: inline-block;
+					margin: 0 10px;
+					img {
+						height: 20px;
+					}
+				}
+			}
+			ul#social {
+				text-align: right;
+			}
+		}
+		div#like-follow {
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+		}
+	}
+	div#main {
+
+		div#preorder {
+			display: block;
+			font-size: 1.2em;
+			padding: $space 0;
+			text-align: center;
+			width: 100%;
+			background: $purple;
+			border-top: $white 2px solid;
+			.pre {
+				margin: 0 $space;
+			}
+		}
+		div#bar {
+			background: $red;
+			color: $white;
+			display: table;
+			width: 100%;
+			div#player, div#signup {
+				display: table-cell;
+				vertical-align: middle;
+				padding: $space/2;
+				width: 50%;
+			}
+			div#player {
+				ul.controls {
+					li#play-btn {
+						display: block;
+						font-size: 2em;
+						background: $purple;
+						padding: 0 $space;
+						margin: 0 $space 0 0;
+						float: left;
+						width: 30px;
+						text-align: center;
+					}
+				}
+				h1.title {
+					line-height: 1em;
+					text-transform: uppercase;
+				}
+				p.share {
+					font-size: .8em;
+					color: $purple;
+				}
+			}
+			div#signup {
+				text-align: right;
+				form {
+					font-size: 80%;
+					position: relative;
+					input {
+						background: none;
+						border: none;
+						font-family: inherit;
+						text-align: center;
+						font-size: inherit;
+						padding: $space/2 $space;
+					}
+					input[type=submit] {
+						border: solid 2px $white;
+						border-radius: $radius;
+						text-transform: uppercase;
+					}
+					input[type=email] {
+						color: $purple;
+					}
+					::-webkit-input-placeholder {
+						color: $purple;
+					}
+					label {
+						display: none;
+						margin: 0 0 $space/2 0;
+					}
+					p.success {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						top: 0;
+						text-align: right;
+						background: $red;
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	div#content {
+		padding: 0 $space/2;
+		min-height: 600px;
+		div#holder {
+			div.box {
+				float: left;
+				width: 25% - $space;
+				margin: 0 $space/2 $space;
+				padding: $space/2 0;
+				h1 {
+					margin: 0 0 $space;
+					color: $purple;
+				}
+				div {
+					margin: 0 0 $space*4;
+					h2 {
+						margin: 0 0 $space;
+						font-size: 1.25em;
+					}
+					p {
+						font-size: .8em;
+						color: $purple;
+						margin: 0 0 $space*2;
+						a {
+							text-decoration: underline;
+						}
+					}
+				
+					img, iframe {
+						max-width: 100%;
+					}
+					ol {
+						color: $purple;
+						font-size: .8em;
+						h3 {
+							font-size: 1.25em;
+						}
+						li {
+							list-style-type: decimal;
+							list-style-position: inside;
+						}
+					}
+				}
+			}
+			div.box.two {
+				background: $white*.97;
+				width: 50% - $space*4;
+				padding: $space/2 $space;
+				iframe {
+					width: 100%;
+				}
+				img.half {
+					width: 50%;
+				}
+				ul.gal {
+					margin: 0 0 $space*2;
+					li {
+						width: 30%;
+						display: inline;
+						img {
+							width: 100%;
+						}
+					}
+				}
+			}
+			div#twitter-widget-1 {
+				.var-narrow .tweet .header {
+					display: none !important;
+					background: red !important;
+					padding: 0 !important;
+				}
+			}
+			ul#instagram {
+				li {
+					img {
+						width: 100%;
+					}
+				}
+			}
+			div.shows {
+				h2 {
+					font-size: 1.5em;
+					text-transform: uppercase;
+				}
+				ul {
+					li {
+						margin: 0 0 $space*6;
+						font-size: .8em;
+						h2 {
+							font-size: 1.25em;
+						}
+					}
+				}
+				p {
+					font-size: .8em;
+					line-height: 2em;
+				}
+				p.with {
+					color: #777;
+				}
+				p.presale {
+					font-size: .75em;
+					margin: 0 0 $space*2;
+				}
+				p.show-info {
+					font-size: 1.2em;
+					a {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+	div#footer {
+		clear: both;
+		padding: $space;
+		background: $purple;
+		font-size: 75%;
+		color: $white;
+		text-align: right;
+		ul {
+			margin: 10px 0;
+			li {
+				display: inline-block;
+				margin: 0 5px;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--iPad--*/
+@media only screen 
+and (max-width : 980px)
+and (orientation: portrait) {
+	
+}
+
+*:focus {
+	outline: 0;
+}
+
