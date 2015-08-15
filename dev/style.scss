@@ -72,14 +72,14 @@ h1 {
 	overflow: hidden;
 	min-height: 100%;
 	div#hero {
-		min-height: 500px;
-		max-height: 600px;
-		height: 65vh;
-		width: 100%;
-		max-width: 1440px;
-		background: $purple url(../img/header3.jpg) center no-repeat;
-		background-size: cover;
-		position: relative;
+		min-height: 400px;
+	    max-height: 500px;
+	    height: 65vh;
+	    width: 100%;
+	    max-width: 1440px;
+	    background: #ffece7 url(../img/header4.png) center no-repeat;
+	    background-size: 90% ;
+	    position: relative;
 		#nav {
 			overflow: hidden;
 			#logo {
@@ -88,6 +88,7 @@ h1 {
 				width: 60px;
 				height: $header-height;
 				float: left;
+				display:none;
 			}
 
 			ul {
@@ -97,15 +98,20 @@ h1 {
 				line-height: $header-height;
 				float: left;
 				font-size: 120%;
-				color: $white;
+				color: $red;
 				li {
-					display: inline-block;
 					margin: 0 10px;
+					display:inline-block;
 					img {
 						height: 20px;
 					}
 				}
 			}
+
+			#menu img {
+						display: none;
+			}
+
 			ul#social {
 				text-align: right;
 			}
